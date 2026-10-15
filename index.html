@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cekih Scoreboard</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <main class="container">
+
+    <header class="hero">
+      <h1> cekih <span>scoreboard</span></h1>
+      <p>CEBURIN!!!</p>
+    </header>
+
+    <section class="panel player-settings">
+      <h2>nama pemain</h2>
+
+      <div class="player-inputs">
+        <input type="text" class="player-name"
+          value="pemain 1" aria-label="Nama pemain 1">
+
+        <input type="text" class="player-name"
+          value="Pemain 2" aria-label="Nama pemain 2">
+
+        <input type="text" class="player-name"
+          value="Pemain 3" aria-label="Nama pemain 3">
+
+        <input type="text" class="player-name"
+          value="Pemain 4" aria-label="Nama pemain 4">
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Tabel Poin</h2>
+
+      <div class="table-wrapper">
+        <table id="scoreTable">
+          <thead>
+            <tr>
+              <th>Ronde</th>
+              <th>pemain 1</th>
+              <th>pemain 2</th>
+              <th>pemain 3</th>
+              <th>pemain 4</th>
+            </tr>
+          </thead>
+
+          <tbody id="scoreBody">
+            <!-- Baris ronde dibuat oleh JavaScript -->
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <th>TOTAL</th>
+              <td class="total">0</td>
+              <td class="total">0</td>
+              <td class="total">0</td>
+              <td class="total">0</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>⚡ Poin Cepat</h2>
+      <p class="hint">
+        Pilih pemain dan ronde, lalu tekan nilai poin.
+      </p>
+
+      <div class="quick-settings">
+        <select id="playerSelect" aria-label="Pilih pemain">
+          <option value="0">Rendy</option>
+          <option value="1">Pemain 2</option>
+          <option value="2">Pemain 3</option>
+          <option value="3">Pemain 4</option>
+        </select>
+
+        <select id="roundSelect" aria-label="Pilih ronde">
+        </select>
+      </div>
+
+      <div id="quickButtons" class="quick-buttons"></div>
+
+      <p id="status" aria-live="polite"></p>
+    </section>
+
+    <section class="panel actions">
+      <button id="resetButton" class="reset-button">
+        ↻ Reset Semua Poin
+      </button>
+    </section>
+
+    <footer>
+      <p>dev.rendy</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
